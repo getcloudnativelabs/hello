@@ -1,4 +1,4 @@
-package starter.gradle;
+package hello;
 
 import org.jooby.Jooby;
 
@@ -9,8 +9,12 @@ public class App extends Jooby {
 
   {
     get(req -> {
-      String name = req.param("name").value("Jooby");
-      return "Hello " + name + "!";
+      String name = req.param("name").value("");
+      if (name != "") {
+        return "Hello " + name + "!";
+      } else {
+        return "Hello!";
+      }
     });
   }
 

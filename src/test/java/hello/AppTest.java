@@ -1,6 +1,6 @@
-package starter.gradle;
+package hello;
 
-import static io.restassured.RestAssured.get;
+import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.equalTo;
 import org.jooby.test.JoobyRule;
 import org.junit.ClassRule;
@@ -17,10 +17,21 @@ public class AppTest {
 
   @Test
   public void integrationTest() {
-    get("/")
-        .then()
-        .assertThat()
-        .body(equalTo("Hello Jooby!"))
-        .statusCode(200);
+    when().
+      get("/").
+    then().
+      body(equalTo("Hello!")).
+      statusCode(200);
+  }
+
+  @Test
+  public void nameParamIntegrationTest() {
+    given().
+      queryParam("name", "Peter").
+    when().
+      get("/").
+    then().
+      body(equalTo("Hello Peter!")).
+      statusCode(200);
   }
 }

@@ -20,9 +20,9 @@ apply plugin: "com.google.osdetector"
 apply plugin: "application"
 apply plugin: "jooby"
 
-group "starter.gradle"
+group "hello"
 version "1.0"
-mainClassName = "starter.gradle.App"
+mainClassName = "hello.App"
 sourceCompatibility = 1.8
 
 repositories {
