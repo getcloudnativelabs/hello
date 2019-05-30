@@ -1,6 +1,6 @@
 buildscript {
   ext {
-    joobyVersion = "1.5.0"
+    joobyVersion = "1.6.0"
   }
 
   repositories {
@@ -9,8 +9,8 @@ buildscript {
   }
 
   dependencies {
-    classpath "com.google.gradle:osdetector-gradle-plugin:1.4.0"
-    classpath "io.spring.gradle:dependency-management-plugin:1.0.3.RELEASE"
+    classpath "com.google.gradle:osdetector-gradle-plugin:1.6.2"
+    classpath "io.spring.gradle:dependency-management-plugin:1.0.7.RELEASE"
     classpath "org.jooby:jooby-gradle-plugin:$joobyVersion"
   }
 }
@@ -42,7 +42,7 @@ dependencies {
   compile "io.netty:netty-tcnative-boringssl-static:${dependencyManagement.importedProperties['boringssl.version']}" 
 
   testCompile "junit:junit:4.12"
-  testCompile "io.rest-assured:rest-assured:3.1.0"
+  testCompile "io.rest-assured:rest-assured:4.0.0"
 }
 
 /** We diverge from the default resources structure to adopt the Jooby standard: */
