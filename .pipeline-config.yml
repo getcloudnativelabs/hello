@@ -1,6 +1,7 @@
 ---
 dependencies:
   - https://github.com/getcloudnativelabs/bonjour.git
+
 phases:
   build:
     task: build
